@@ -1,17 +1,11 @@
+//Coordinador de todos los componentes,para unir a todos.
 import './styles/style.scss';
-import jQuery from 'jquery';
-import template from './app.pug';
-import articles from './articles';
+import $ from 'jquery';
+import 'bootstrap';
+import assetsList from './assets-list/assets-list';
+import createAssetFormCmp from './create-asset-form/form';
 
-export default class App {
-  name = 'Sample App';
 
-  static init() {
-    const body = jQuery('body');
-    const html = template({ articles: articles });
+assetsList.appendTo('#assets-app');
 
-    body.append(html);
-  }
-}
-
-global.App = App;
+createAssetFormCmp().appendTo('#assets-app');
