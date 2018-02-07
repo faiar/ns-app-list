@@ -1,0 +1,26 @@
+h2= title
+
+//- ul.assets-list
+//-   for item in assets
+//-     li
+//-       a(href="#")= `${item.name} (${item.quantity})`
+
+
+
+table.assets-list.table
+	thead
+		tr
+			th ID
+			th Name
+			th Quantity
+			th &nsbp;
+
+	tbody
+		for item in sort(assets)
+			tr(id="asset-id-"+item.id)
+				td= item.id
+				td
+					a(href="#")= item.name 
+				td= item.quantity
+				td
+					button.edit-action.btn.btn-sm.btn-default Edit

@@ -1,0 +1,21 @@
+.create-new-asset-component.component
+	button.open-new-asset-modal.btn.btn-default Add new asset
+
+	.modal#add-new-asset-modal
+		.modal-dialog
+			form.modal-content
+				.modal-header
+					h3 New asset
+
+				.modal-body
+					.form-group
+						label(for="asset-name") Asset Name
+						input.form-control(id="asset-name")
+
+					.form-group
+						label(for="asset-quantity") Quantity
+						input.form-control(id="asset-quantity", type="number", min="1", max="20", value="1")
+
+				.modal-footer
+					.button-group
+						button.btn.btn-primary Add Asset
